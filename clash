@@ -1,0 +1,67 @@
+;常用国家策略组 加强拦截广告 加强国内IP 加强国外IP
+[custom]
+;代理
+ruleset=📡 DIY,https://raw.githubusercontent.com/cutethotw/ClashRule/main/Rule/ChatGPT.list
+ruleset=📡 DIY,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml
+ruleset=📡 DIY,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml
+ruleset=📡 DIY,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.yaml
+ruleset=📡 DIY,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.yaml
+ruleset=📡 DIY,https://raw.githubusercontent.com/cutethotw/ClashRule/main/Rule/Perplexity.list
+ruleset=📡 DIY,https://raw.githubusercontent.com/cutethotw/ClashRule/main/Rule/Grok.list
+ruleset=♻️ 自动选择,clash-classic:https://raw.githubusercontent.com/lwd-temp/anti-ip-attribution/main/generated/rule-provider.yaml
+ruleset=♻️ 自动选择,clash-classic:https://whatshub.top/rule/Global.list
+ruleset=♻️ 自动选择,clash-classic:https://github.com/VirgilClyne/iRingo/raw/main/RuleSet/iCloud.PrivateRelay.yaml
+ruleset=📺 Youtube,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
+ruleset=♻️ 自动选择,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/source/rule/Synology/Synology.list
+ruleset=♻️ 自动选择,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Synology/Synology.yaml
+ruleset=♻️ 自动选择,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Synology/Synology.list
+ruleset=♻️ 自动选择,clash-classic:https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+ruleset=♻️ 自动选择,clash-classic:https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
+ruleset=♻️ 自动选择,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.list
+ruleset=♻️ 自动选择,clash-classic:https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+ruleset=♻️ 自动选择,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia.yaml
+ruleset=♻️ 自动选择,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Domain.yaml
+ruleset=♻️ 自动选择,[]GEOIP,!CN,no-resolve 
+
+;直连
+ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list,no-resolve
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list,no-resolve
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
+ruleset=DIRECT,http://xyz.hglpnm.top:5244/d/alist/DIRECT.txt
+ruleset=DIRECT,https://raw.githubusercontent.com/0x2E/someip/build/cidr.txt
+ruleset=DIRECT,[]GEOIP,LAN,no-resolve 
+ruleset=DIRECT,[]GEOIP,CN,no-resolve 
+
+
+;去广告
+;ruleset=🛑 广告拦截,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Classical.yaml
+;ruleset=🛑 广告拦截,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+;ruleset=🛑 广告拦截,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+;ruleset=🛑 广告拦截,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list
+;ruleset=🛑 广告拦截,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list
+;ruleset=🛑 广告拦截,http://xyz.hglpnm.top:5244/d/mnt/user/SHARE/mnt/user/alist/REJECT.txt
+
+
+ruleset=🍃 兜底策略,[]FINAL
+
+custom_proxy_group=🏠 ISP节点`select`[]ISP
+
+custom_proxy_group=📡 DIY入口`url-test`.*`http://chat.openai.com`300,,50
+custom_proxy_group=📡 DIY链式`dialer-proxy`[]📡 DIY入口`[]🏠 ISP节点
+
+custom_proxy_group=🚀 节点选择`select`[]🌈 Youtube自动选择`.♻️ 自动选择`.*
+;custom_proxy_group=🚀 节点选择`url-test`select`[]♻️ 自动选择`.*`http://www.google.com`300,,50`
+;custom_proxy_group=🧦Just`select`(JMS.*)`http://www.google.com`300,,50
+custom_proxy_group=♻️ 自动选择`url-test`(JMS.*|BIG|XXX|BWGJP|claw)`http://www.google.com`300,,50
+custom_proxy_group=🌈 Youtube自动选择`url-test`.*`http://www.youtube.com`300,,50
+custom_proxy_group=📡 DIY`url-test`.*`http://chat.openai.com`300,,50
+custom_proxy_group=📺 Youtube`select`[]🌈 Youtube自动选择`.*
+custom_proxy_group=🛑 广告拦截`select`[]REJECT`[]DIRECT
+custom_proxy_group=🍃 兜底策略`select`[]🚀 节点选择`[]♻️ 自动选择`[]DIRECT
+enable_rule_generator=true
+overwrite_original_rules=true
