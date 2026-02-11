@@ -4,8 +4,9 @@
 ruleset=📡 DIY,https://raw.githubusercontent.com/cutethotw/ClashRule/main/Rule/ChatGPT.list
 ruleset=📡 DIY,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml
 ruleset=📡 DIY,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml
-ruleset=📡 DIY,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.yaml
+ruleset=📡 DIY,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Gemini/Gemini.list
 ruleset=📡 DIY,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.yaml
+ruleset=📡 DIY,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Google/Google.list
 ruleset=📡 DIY,https://raw.githubusercontent.com/cutethotw/ClashRule/main/Rule/Perplexity.list
 ruleset=📡 DIY,https://raw.githubusercontent.com/cutethotw/ClashRule/main/Rule/Grok.list
 ruleset=📺 Youtube,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
@@ -22,7 +23,7 @@ ruleset=♻️ 自动选择,clash-classic:https://raw.githubusercontent.com/blac
 ruleset=♻️ 自动选择,clash-classic:https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
 ruleset=♻️ 自动选择,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia.yaml
 ruleset=♻️ 自动选择,clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Domain.yaml
-ruleset=♻️ 自动选择,[]GEOIP,!CN,no-resolve 
+ruleset=♻️ 自动选择,[]GEOIP,!CN,no-resolve 
 
 ;直连
 ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list
@@ -35,8 +36,8 @@ ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ch
 ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
 ruleset=DIRECT,http://xyz.hglpnm.top:5244/d/alist/DIRECT.txt
 ruleset=DIRECT,https://raw.githubusercontent.com/0x2E/someip/build/cidr.txt
-ruleset=DIRECT,[]GEOIP,LAN,no-resolve 
-ruleset=DIRECT,[]GEOIP,CN,no-resolve 
+ruleset=DIRECT,[]GEOIP,LAN,no-resolve 
+ruleset=DIRECT,[]GEOIP,CN,no-resolve 
 
 
 ;去广告
@@ -66,3 +67,4 @@ custom_proxy_group=🛑 广告拦截`select`[]REJECT`[]DIRECT
 custom_proxy_group=🍃 兜底策略`select`[]🚀 节点选择`[]♻️ 自动选择`[]DIRECT
 enable_rule_generator=true
 overwrite_original_rules=true
+
